@@ -1,4 +1,4 @@
-# Python & Pandas Practice
+# Python & Pandas 
 
 This repository contains my **Python and Pandas practice programs, examples, and exercises**.
 
