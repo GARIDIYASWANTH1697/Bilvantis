@@ -1,0 +1,116 @@
+CREATE TABLE CUSTOMER_PRACTICE AS
+SELECT *
+FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.CUSTOMER;
+
+show databases;
+
+use database SNOWFLAKE_SAMPLE_DATA;
+
+show tables;
+
+-- use schema TPCH_SF10;
+
+-- use table CUSTOMER;
+
+use table;
+
+CREATE TABLE CUSTOMER_PRACTICE AS
+SELECT *
+FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.CUSTOMER;
+
+
+
+SHOW DATABASES;
+
+CREATE DATABASE TIME_TRAVEL_PRACTICE;
+
+CREATE SCHEMA TIME_TRAVEL_PRACTICE.CUSTOMER_SCHEMA;
+
+
+CREATE TABLE TIME_TRAVEL_PRACTICE.CUSTOMER_SCHEMA.CUSTOMER_PRACTICE AS
+SELECT *
+FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.CUSTOMER;
+
+SELECT *
+FROM TIME_TRAVEL_PRACTICE.CUSTOMER_SCHEMA.CUSTOMER_PRACTICE
+LIMIT 10;
+
+
+SELECT *
+FROM CUSTOMER_PRACTICE
+LIMIT 10;
+
+-- UPDATE CUSTOMER_PRACTICE
+-- SET C_CUSTKEY = 9999
+-- WHERE C_NATIONKEY >= 10;
+
+
+
+SELECT C_CUSTKEY, C_NAME, C_ACCTBAL
+FROM CUSTOMER_PRACTICE
+WHERE C_CUSTKEY = 1;
+
+
+SELECT C_CUSTKEY, C_NAME, C_ACCTBAL
+FROM CUSTOMER_PRACTICE
+AT (OFFSET => -60*5)
+WHERE C_CUSTKEY = 1;
+
+
+select * from COMPANY_DBS.EMPLOYEE_SCHEMA.EMPLOYEES11;
+
+SELECT *
+FROM COMPANY_DBS.EMPLOYEE_SCHEMA.EMPLOYEES11;
+
+SELECT *
+FROM COMPANY_DBS.EMPLOYEE_SCHEMA.EMPLOYEES11
+LIMIT 10;
+
+
+INSERT INTO COMPANY_DBS.EMPLOYEE_SCHEMA.EMPLOYEES11
+(ID, NAME, DEPARTMENT, SALARY)
+VALUES
+(11, 'Rahul', 'IT', 45000),
+(12, 'Kiran', 'HR', 35000),
+(13, 'Arjun', 'Finance', 55000),
+(14, 'Priya', 'IT', 60000),
+(15, 'Sneha', 'Marketing', 40000),
+(16, 'Ravi', 'Sales', 38000),
+(17, 'Anil', 'IT', 65000),
+(18, 'Divya', 'HR', 42000),
+(19, 'Suresh', 'Finance', 50000),
+(20, 'Meena', 'IT', 70000),
+(21, 'Varun', 'Sales', 48000),
+(22, 'Pooja', 'Marketing', 45000),
+(23, 'Ajay', 'IT', 52000),
+(24, 'Neha', 'HR', 39000),
+(25, 'Manoj', 'Finance', 58000),
+(26, 'Kavya', 'IT', 75000),
+(27, 'Rohit', 'Sales', 43000),
+(28, 'Swathi', 'Marketing', 47000),
+(29, 'Vikram', 'IT', 62000),
+(30, 'Lakshmi', 'HR', 41000),
+(31, 'Naveen', 'Finance', 67000),
+(32, 'Harsha', 'IT', 80000),
+(33, 'Deepak', 'Sales', 46000),
+(34, 'Sanjana', 'Marketing', 49000),
+(35, 'Teja', 'IT', 55000),
+(36, 'Akhil', 'HR', 44000),
+(37, 'Swetha', 'Finance', 72000),
+(38, 'Karthik', 'IT', 68000),
+(39, 'Bhavya', 'Sales', 51000),
+(40, 'Mohan', 'Marketing', 53000),
+(41, 'Chaitanya', 'IT', 85000),
+(42, 'Nithya', 'HR', 46000),
+(43, 'Praveen', 'Finance', 61000),
+(44, 'Sravya', 'IT', 90000),
+(45, 'Gopi', 'Sales', 57000),
+(46, 'Harini', 'Marketing', 54000),
+(47, 'Sandeep', 'IT', 78000),
+(48, 'Keerthi', 'HR', 50000),
+(49, 'Abhi', 'Finance', 74000),
+(50, 'Varsha', 'IT', 95000);
+
+
+SELECT COUNT(*)
+FROM COMPANY_DBS.EMPLOYEE_SCHEMA.EMPLOYEES11;
