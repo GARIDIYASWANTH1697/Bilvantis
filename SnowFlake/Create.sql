@@ -1,0 +1,51 @@
+CREATE DATABASE COMPANY_DBS;
+
+show databases;
+
+-- USE DATABASE COMPANY_DB;
+
+CREATE SCHEMA EMPLOYEE_SCHEMA;
+
+USE SCHEMA EMPLOYEE_SCHEMA;
+
+
+CREATE TABLE EMPLOYEES (
+    EMP_ID INT,
+    EMP_NAME VARCHAR(50),
+    SALARY NUMBER(10,2),
+    DEPARTMENT VARCHAR(30)
+);
+
+INSERT INTO EMPLOYEES VALUES
+(1, 'Ravi', 30000, 'IT'),
+(2, 'Kiran', 40000, 'HR'),
+(3, 'Arjun', 50000, 'IT');
+
+
+select * from EMPLOYEES;
+
+
+CREATE OR REPLACE TABLE EMPLOYEES11 (
+    ID INT,
+    NAME VARCHAR(50),
+    DEPARTMENT VARCHAR(50),
+    SALARY NUMBER(10,2)
+);
+
+
+
+INSERT INTO EMPLOYEES11 VALUES
+(1, 'Ravi', 'IT', 45000),
+(2, 'Suresh', 'HR', 30000),
+(3, 'Priya', 'IT', 55000),
+(4, 'Kiran', 'Finance', 40000),
+(5, 'Anjali', 'HR', 35000),
+(6, 'Rahul', 'IT', 60000),
+(7, 'Sneha', 'Finance', 50000),
+(8, 'Arjun', 'Sales', 32000),
+(9, 'Divya', 'Sales', 38000),
+(10, 'Naveen', 'Finance', 45000);
+
+
+-- 4. CHECK ORIGINAL DATA
+SELECT * FROM EMPLOYEES11;
